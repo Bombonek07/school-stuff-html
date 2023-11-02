@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Směnárna u Ondry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="title">Směnárna u Ondry</h1>
+    <img class="arrow" src="arrow.png" width="300">
+    <div class="selection">
+        <h2 class="zna1">Z:</h2>
+        <select id="option2" onchange="currency2();" class="options2">
+            <option value=0>-select-</option>
+            <option value=1>Americký dolar</option>
+            <option value=2>Australský dolar</option>
+            <option value=3>Brazilský real</option>
+            <option value=4>Britská libra</option>
+            <option value=5>Bulharský lev</option>
+            <option value=6>Česká koruna</option>
+            <option value=7>Čínský juan</option>
+            <option value=8>Dánská koruna</option>
+            <option value=9>Euro</option>
+            <option value=10>Filipínské peso</option>
+            <option value=11>Hongkongský dolar</option>
+            <option value=12>Indická rupie</option>
+            <option value=13>Indonéská rupie</option>
+            <option value=14>Islandská koruna</option>
+            <option value=15>Izraelský šekel</option>
+            <option value=16>Japonský jen</option>
+            <option value=17>Jihoafrický rand</option>
+            <option value=18>Jihokorejský won</option>
+            <option value=19>Kanadský dolar</option>
+            <option value=20>Maďarský forint</option>
+            <option value=21>Malajsijský ringgit</option>
+            <option value=22>Mexické peso</option>
+            <option value=23>MMF</option>
+            <option value=24>Norská koruna</option>
+            <option value=25>Novozélandský dolar</option>
+            <option value=26>Polský zlotý</option>
+            <option value=27>Rumunský nový lei</option>
+            <option value=28>Singapurský dolar</option>
+            <option value=29>Švédská koruna</option>
+            <option value=30>Švýcarský frank</option>
+            <option value=31>Thajský baht</option>
+            <option value=32>Turecká lira</option>
+        </select>
+        <h2 class="zna2">Na:</h2>
+        <select id="option" onchange="currency();" class="options1">
+            <option value=0>-select-</option>
+            <option value=1>Americký dolar</option>
+            <option value=2>Australský dolar</option>
+            <option value=3>Brazilský real</option>
+            <option value=4>Britská libra</option>
+            <option value=5>Bulharský lev</option>
+            <option value=6>Česká koruna</option>
+            <option value=7>Čínský juan</option>
+            <option value=8>Dánská koruna</option>
+            <option value=9>Euro</option>
+            <option value=10>Filipínské peso</option>
+            <option value=11>Hongkongský dolar</option>
+            <option value=12>Indická rupie</option>
+            <option value=13>Indonéská rupie</option>
+            <option value=14>Islandská koruna</option>
+            <option value=15>Izraelský šekel</option>
+            <option value=16>Japonský jen</option>
+            <option value=17>Jihoafrický rand</option>
+            <option value=18>Jihokorejský won</option>
+            <option value=19>Kanadský dolar</option>
+            <option value=20>Maďarský forint</option>
+            <option value=21>Malajsijský ringgit</option>
+            <option value=22>Mexické peso</option>
+            <option value=23>MMF</option>
+            <option value=24>Norská koruna</option>
+            <option value=25>Novozélandský dolar</option>
+            <option value=26>Polský zlotý</option>
+            <option value=27>Rumunský nový lei</option>
+            <option value=28>Singapurský dolar</option>
+            <option value=29>Švédská koruna</option>
+            <option value=30>Švýcarský frank</option>
+            <option value=31>Thajský baht</option>
+            <option value=32>Turecká lira</option>
+        </select>
+    </div>
+    <div class="selection">
+        <p id="num" class="output"></p>
+        <button class="button" type="button" onclick="input()">Přepočítat</button>
+        <input id="input" class="input" type="number" placeholder="kolik">
+    </div>
+    <script src="function.js"></script>
+</body>
+</html>

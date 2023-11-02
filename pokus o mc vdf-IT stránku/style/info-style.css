@@ -1,0 +1,38 @@
+body{
+    background-image: url('https://blog.hdwallsource.com/wp-content/uploads/2015/12/minecraft-wallpaper-18896-19377-hd-wallpapers.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+a{
+    text-decoration: none;
+}
+
+.info-nadpis{
+    position: relative;
+    color: #312920;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: 550;
+
+    background-color: #EBE3C1;
+
+    border-width: 5px;
+    border-style: solid;
+    border-color: #312920;
+
+    width: 1910px;
+    height: 60px;
+    top: -34px;
+    left: -8px;
+}
+
+.cokoli{
+    position: relative;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    width: 20%;
+    text-align: center;
+    left: 40%;
+}

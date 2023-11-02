@@ -1,0 +1,47 @@
+body{
+    background-color: #1c202b;
+}
+
+.tabulka{
+    background-color: #292f3d;
+    max-width: 600px;
+    min-width: 600px;
+    max-height: 50px;
+    min-height: 50px;
+    margin-top: 20px;
+    margin-left: 30%;
+}
+
+.list{
+    max-width: 140px;
+    min-width: 140px;
+    margin-top: 15px;
+    margin-left: 9px;
+    max-height: 22px;
+    min-height: 22px;
+    background-color: #414651;
+    color: rgb(160, 160, 160);
+    border: none;
+    
+}
+
+.button{
+    max-width: 140px;
+    min-width: 140px;
+    margin-top: 14px;
+    max-height: 22px;
+    min-height: 22px;
+    background-color: #414651;
+    color: rgb(160, 160, 160);
+    border: none;
+}
+.input{
+    max-width: 140px;
+    min-width: 140px; 
+    margin-top: 14px;
+    max-height: 20px;
+    min-height: 20px;
+    background-color: #414651;
+    color: rgb(160, 160, 160);
+    border: none;
+}
