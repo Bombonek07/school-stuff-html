@@ -1,0 +1,27 @@
+body{
+    display: grid;
+    grid-template-columns: 4.5rem 15rem 1fr;
+    grid-auto-rows:minmax(auto, 100vh);
+}
+
+.server_column{
+    padding-top: 0.75rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3rem 0.125rem;
+    background-color: black;
+}
+
+.server{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    height: 3rem;
+    width: 4.5rem;
+    margin-bottom: 0.5rem;
+    background-color: aqua;
+}
