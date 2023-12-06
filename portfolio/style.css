@@ -1,0 +1,20 @@
+body{
+    background-color: black;
+}
+
+div{
+    display: table;
+    text-align: center;
+}
+span{
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 6rem;
+}
+
+@keyframes h1{
+    from {font-size: 6rem;}
+    to {font-size: 20rem;}
+}
