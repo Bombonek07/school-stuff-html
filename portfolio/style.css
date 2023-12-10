@@ -1,20 +1,116 @@
-body{
-    background-color: black;
-}
-
-div{
-    display: table;
-    text-align: center;
-}
-span{
-    display: table-cell;
-    vertical-align: middle;
-    color: white;
+body { 
+    background-color: rgb(46, 46, 46);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 6rem;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 0.08fr 1.5fr 0.4fr;
+    grid-template-rows: 0.2fr auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "side-area Name top-area"
+        "side-area desciption profile";
+}
+  
+.Name { 
+    grid-area: Name; 
+    color: white;
+    background-color: rgb(46, 46, 46);
+    text-align: center;
+    font-size: 4rem;
+}
+  
+.profile {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "profile_pic"
+        "socialmedia";
+    grid-area: profile;
+}
+  
+.profile_pic { 
+    grid-area: profile_pic; 
+    background-color: rgb(70, 70, 70);
+    border-style: solid;
+    border-width: 0 0 0 0.3rem;
+    border-color: rgb(46, 46, 46);
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    padding: 2.5rem;
 }
 
-@keyframes h1{
-    from {font-size: 6rem;}
-    to {font-size: 20rem;}
+.pic {
+    width: 12rem;
+    height: 12rem;
+    background-color: rgb(228, 228, 0);
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    border-width: 0.3rem;
 }
+  
+.socialmedia { 
+    grid-area: socialmedia;
+    background-color: rgb(70, 70, 70);
+    border-style: solid;
+    border-width: 0.3rem 0 0 0.3rem;
+    border-color: rgb(46, 46, 46);
+    padding: 2.5rem; 
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "dc"
+        "git"
+        "ig";
+}
+
+.dc {
+    grid-area: dc;
+    width: 8rem;
+    height: 8rem;
+    padding: 1rem;
+}
+
+.git {
+    grid-area: git;
+    background-color: white;
+    border-radius: 50%;
+    border-width: 0;
+    width: 6rem;
+    height: 6rem;
+    padding: 1rem;
+}
+
+.ig {
+    grid-area: ig;
+    width: 8rem;
+    height: 8rem;
+    padding: 1rem;
+}  
+
+.desciption { 
+    grid-area: desciption; 
+    background-color: rgb(100, 100, 100);
+    font-size: 2rem;
+    padding: 4rem;
+}
+  
+.side-area { 
+    grid-area: side-area; 
+    background-color: rgb(46, 46, 46);
+}
+  
+.top-area { 
+    grid-area: top-area;
+    background-color: rgb(46, 46, 46);
+}
+  
