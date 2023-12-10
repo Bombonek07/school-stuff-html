@@ -65,19 +65,11 @@ body {
     align-items: center;
     justify-items: center;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
-        "dc"
         "git"
         "ig";
-}
-
-.dc {
-    grid-area: dc;
-    width: 8rem;
-    height: 8rem;
-    padding: 1rem;
 }
 
 .git {
