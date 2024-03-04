@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubbles</title>
+    <style>
+      body {
+        background: rgb(80, 100, 120);
+      }
+
+      #cnvs {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        z-index: -2;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="cnvs"></canvas>
+    <script>
+      const canvas = document.getElementById("cnvs")
+      const ctx = canvas.getContext("2d")
+      const maxRadius = 100
+      const minRadius = 10
+      const maxSpeed = 2
+      let dropCount = 0
+      let drops = []
+
+      class Drop {
+        constructor() {
+          this.radius = Math.random() * maxRadius + minRadius
+          this.x = Math.random() * canvas.width
+          this.y = Math.random() * canvas.height
+          this.dx = Math.random() * maxSpeed - maxSpeed / 2
+          this.dy = Math.random() * maxSpeed - maxSpeed / 2
+        }
+        move() {
+          this.x += this.dx
+          this.y += this.dy
+        }
+        drawbg(ctx) {
+          ctx.beginPath()
+          ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI)
+          ctx.fillStyle = `rgb(255,255,255)`
+          ctx.fill()
+          ctx.closePath()
+        }
+        drawfg(ctx) {
+          ctx.beginPath()
+          ctx.arc(this.x, this.y, (this.radius-(this.radius/5)), 0, 2 * Math.PI)
+          ctx.fillStyle = `rgb(80, 100, 120)`
+          ctx.fill()
+          ctx.closePath()
+        }
+      }
+      function resizeCanvas() {
+        canvas.width = window.innerWidth
+        canvas.height = window.innerHeight
+        dropCount = Math.round((canvas.width * canvas.height) / 20000)
+        drops = []
+        for (let i = 0; i < dropCount; i++) {
+          drops.push(new Drop())
+        }
+      }
+
+      window.onresize = resizeCanvas
+      resizeCanvas()
+
+      function animateCanvas() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        drops.forEach((drop) => drop.drawbg(ctx))
+        drops.forEach((drop) => drop.drawfg(ctx))
+        drops.forEach((drop) => drop.move())
+
+        requestAnimationFrame(animateCanvas)
+      }
+
+      animateCanvas()
+    </script>
+  </body>
+</html>
