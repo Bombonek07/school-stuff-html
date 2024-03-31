@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DVD Loading Screen</title>
+        <style>
+            body {
+                margin: 0;
+                
+                background-color: #000;
+            }
+            #dvdCanvas {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="dvdCanvas"></canvas>
+        <script>
+            const canvas = document.getElementById('dvdCanvas');
+            const ctx = canvas.getContext('2d');
+
+            function resizeCanvas() {
+                canvas.width = window.innerWidth
+                canvas.height = window.innerHeight
+            }
+
+            window.onresize = resizeCanvas
+            resizeCanvas()
+
+            let x = canvas.width / 2;
+            let y = canvas.height / 2;
+            let dx = 1;
+            let dy = 1;
+
+            function setRandomColor() {
+                ctx.fillStyle = '#' + Math.floor(Math.random()*16777215).toString(16);
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.font = '100px Arial';
+                ctx.fillText('DVD', x, y); 
+                ctx.beginPath();
+                ctx.ellipse(x+103, y+15, 100, 12, 0, 0, 2 * Math.PI);
+                ctx.fill()
+
+                if (x + dx > canvas.width - 200 || x + dx < - 10) {
+                    dx = -dx;
+                    setRandomColor();
+                }
+                if (y + dy > canvas.height - 22 || y + dy < 70) {
+                    dy = -dy;
+                    setRandomColor();
+                }
+
+                x += dx;
+                y += dy;
+
+                requestAnimationFrame(draw);
+            }
+
+            draw();
+            setRandomColor()
+        </script>
+    </body>
+</html>
