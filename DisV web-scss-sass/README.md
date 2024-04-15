@@ -1,4 +1,4 @@
-##Vytvořil jsem základní formulař pro přihlášení##
+## Vytvořil jsem základní formulař pro přihlášení##
 prvky sass/scss které jsem použil:
    - nesting
    - proměnné
