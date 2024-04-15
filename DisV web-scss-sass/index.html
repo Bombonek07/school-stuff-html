@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DisV scss/sass</title>
+</head>
+<body>
+    <div class="table">
+        <table>
+            <h2>Přihlášení</h2>
+            <label for="name">Jméno: </label>
+            <input class="input" id="name" name="firstname" type="text" placeholder="Franta">
+            <label for="sir_name">Příjmení: </label>
+            <input class="input" id="sir_name" name="lastname" type="text" placeholder="Lopata">
+            <label for="email">Email: </label>
+            <input class="input" id="email" type="email" placeholder="franta.lopata01@gmail.com">
+            <button class="button" id="submit" onclick="submit()">Potvrdit</button>
+        </table>
+    </div>
+    <script>
+        function submit(){
+            if (document.getElementById("name").value && document.getElementById("sir_name").value && document.getElementById("email").value){
+                alert('Přihlíšení úspěšné')
+                document.getElementById("name").value = ""
+                document.getElementById("sir_name").value = ""
+                document.getElementById("email").value = ""
+            }
+            else{
+                alert('Vyplň všechna políčka')
+            }
+        }
+    </script>
+</body>
+</html>
